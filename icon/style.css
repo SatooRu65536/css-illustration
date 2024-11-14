@@ -1,0 +1,385 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --black: #000;
+  --white: #fff;
+  --orange: #ff9900;
+  --dark-orange: #b44f0b;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  opacity: .2;
+  position: absolute;
+  top: 0;
+  left: 3px;
+  user-select: none;
+  pointer-events: none;
+  z-index: 9999999999999999;
+}
+
+.🐧 {
+  width: 100%;
+  height: 100%;
+}
+
+.🐧 div {
+  position: absolute;
+}
+
+.head {
+  background-color: var(--black);
+  width: 30%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  top: 9%;
+  left: calc(50% - 15%);
+}
+
+.eye-ling {
+  width: 13px;
+  height: 13px;
+  border: 3px solid var(--white);
+  border-radius: 50%;
+  z-index: 5;
+}
+
+.eye-ling.left {
+  top: 21%;
+  left: 40%;
+}
+
+.eye-ling.right {
+  top: 21%;
+  right: 40%;
+}
+
+.beak {
+  width: 16px;
+  height: 12px;
+  background-color: var(--dark-orange);
+  top: 28%;
+  left: calc(50% - 8px);
+  border-top-left-radius: 9px 2px;
+  border-bottom-left-radius: 9px 8px;
+  border-top-right-radius: 9px 2px;
+  border-bottom-right-radius: 9px 8px;
+}
+
+.hand {
+  background-color: var(--black);
+  width: 55px;
+  height: 34px;
+  top: 50%;
+  z-index: 4;
+}
+
+.hand.left {
+  rotate: 54deg;
+  left: 24%;
+  border-bottom-right-radius: 67px 70px;
+}
+
+.hand.right {
+  rotate: -54deg;
+  right: 24%;
+  border-bottom-left-radius: 67px 70px;
+}
+
+.shoulder {
+  background-color: var(--black);
+  height: 30px;
+  width: 100px;
+  top: 38%;
+}
+
+.shoulder.left {
+  rotate: -60deg;
+  left: 16%;
+  border-top-left-radius: 20% 100%;
+}
+
+.shoulder.right {
+  rotate: 60deg;
+  right: 16%;
+  border-top-right-radius: 20% 100%;
+}
+
+.jaw-mask.left {
+  background-color: var(--white);
+  width: 31px;
+  height: 23px;
+  clip-path: ellipse(39px 38px at -14% 179%);
+  top: 35.6%;
+  left: 40.5%;
+  z-index: 3;
+}
+
+.jaw-mask.right {
+  background-color: var(--white);
+  width: 31px;
+  height: 23px;
+  clip-path: ellipse(39px 38px at 114% 179%);
+  top: 35.6%;
+  right: 40.5%;
+  z-index: 3;
+}
+
+.jaw {
+  background-color: var(--black);
+  height: 23px;
+  left: 40.6%;
+  right: 40.6%;
+  top: 34.9%;
+  z-index: 2;
+}
+
+.stomach {
+  background-color: var(--white);
+  left: 29%;
+  right: 29%;
+  top: 35%;
+  bottom: 14%;
+  border-top-left-radius: 55px 129px;
+  border-bottom-left-radius: 25px 42px;
+  border-top-right-radius: 55px 129px;
+  border-bottom-right-radius: 25px 42px;
+  z-index: 1;
+}
+
+.body {
+  background-color: var(--black);
+  left: 26%;
+  right: 26%;
+  top: 35%;
+  bottom: 13%;
+  border-top-left-radius: 55px 129px;
+  border-bottom-left-radius: 25px 42px;
+  border-top-right-radius: 55px 129px;
+  border-bottom-right-radius: 25px 42px;
+}
+
+.foot {
+  background-color: var(--orange);
+  height: 14px;
+  bottom: 9%;
+  z-index: -1;
+}
+
+.foot.left.first {
+  width: 15px;
+  left: 37%;
+  clip-path: polygon(0 0, 100% 0, 100% 10%, 0 100%);
+}
+
+.foot.left.secound {
+  width: 20px;
+  left: 37.4%;
+  clip-path: polygon(0 0, 100% 0, 100% 0%, 50% 100%);
+}
+
+.foot.left.third {
+  width: 15px;
+  left: 39.3%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0%);
+}
+
+.foot.right.first {
+  width: 15px;
+  right: 37%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0%);
+}
+
+.foot.right.secound {
+  width: 20px;
+  right: 37.4%;
+  clip-path: polygon(0 0, 100% 0, 100% 0%, 50% 100%);
+}
+
+.foot.right.third {
+  width: 15px;
+  right: 39.3%;
+  clip-path: polygon(0 0, 100% 0, 100% 10%, 0 100%);
+}
+
+.📃 {
+  width: 70px;
+  height: 62px;
+  position: absolute;
+  top: 46%;
+  left: 38%;
+  z-index: 4;
+}
+
+.📃 .left,
+.📃 .right {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.📃 .left::before,
+.📃 .left::after,
+.📃 .right::before,
+.📃 .right::after {
+  content: '';
+  width: 40%;
+  height: 100%;
+  display: block;
+  position: absolute;
+}
+
+.📃 .left::before {
+  background-color: var(--black);
+  clip-path: polygon(20% 5%, 99% 4%, 68% 17%, 99% 24%, 70% 35%, 80% 42%, 61% 45%, 93% 54%, 73% 64%, 91% 72%, 72% 81%, 87% 87%, 50% 100%, 0 100%);
+}
+
+.📃 .left::after {
+  background-color: var(--white);
+  clip-path: polygon(27% 9%, 81% 8%, 53% 17%, 86% 25%, 58% 34%, 69% 40%, 48% 44%, 83% 55%, 62% 64%, 81% 72%, 62% 81%, 76% 87%, 51% 96%, 10% 97%);
+}
+
+.📃 .left div {
+  position: absolute;
+  background-color: var(--black);
+  z-index: 6;
+}
+
+.📃 .left div:nth-child(1) {
+  height: 2px;
+  width: 8px;
+  top: 15%;
+  left: 13%;
+  border-radius: 999px;
+}
+
+.📃 .left div:nth-child(2) {
+  height: 2px;
+  width: 12px;
+  top: 26%;
+  left: 13%;
+  border-radius: 999px;
+}
+
+.📃 .left div:nth-child(3) {
+  height: 2px;
+  width: 8px;
+  top: 41%;
+  left: 13%;
+  border-radius: 999px;
+}
+
+.📃 .left div:nth-child(4) {
+  height: 2px;
+  width: 10px;
+  top: 53%;
+  left: 17%;
+  border-radius: 999px;
+}
+
+.📃 .left div:nth-child(5) {
+  height: 2px;
+  width: 8px;
+  top: 70%;
+  left: 19%;
+  border-radius: 999px;
+  rotate: 10deg;
+}
+
+.📃 .left div:nth-child(6) {
+  height: 2px;
+  width: 15px;
+  top: 84%;
+  left: 10%;
+  border-radius: 999px;
+}
+
+.📃 .right::before,
+.📃 .right::after {
+  right: 0;
+  top: 0;
+}
+
+.📃 .right::before {
+  background-color: var(--black);
+  clip-path: polygon(32% 5%, 85% 5%, 100% 100%, 5% 100%, 28% 92%, 0% 83%, 25% 78%, 0% 66%, 25% 60%, 0% 51%, 18% 46%, 0% 39%, 29% 28%, 0% 17%);
+}
+
+.📃 .right::after {
+  background-color: var(--white);
+  clip-path: polygon(36% 8%, 79% 8%, 94% 97%, 27% 97%, 41% 92%, 13% 83%, 38% 79%, 11% 66%, 38% 61%, 11% 51%, 30% 46%, 10% 39%, 40% 27%, 11% 17%);
+}
+
+.📃 .right div {
+  position: absolute;
+  background-color: var(--black);
+  z-index: 6;
+}
+
+.📃 .right div:nth-child(1) {
+  height: 2px;
+  width: 16px;
+  top: 15%;
+  right: 13%;
+  border-radius: 999px;
+}
+
+.📃 .right div:nth-child(2) {
+  height: 2px;
+  width: 17px;
+  top: 28%;
+  right: 5%;
+  border-radius: 999px;
+}
+
+.📃 .right div:nth-child(3) {
+  height: 2px;
+  width: 14px;
+  top: 44%;
+  right: 12%;
+  border-radius: 999px;
+}
+
+.📃 .right div:nth-child(4) {
+  height: 2px;
+  width: 10px;
+  top: 56%;
+  right: 14%;
+  rotate: -8deg;
+  border-radius: 999px;
+}
+
+.📃 .right div:nth-child(5) {
+  height: 2px;
+  width: 15px;
+  top: 73%;
+  right: 9%;
+  border-radius: 999px;
+}
+
+.📃 .right div:nth-child(6) {
+  height: 2px;
+  width: 18px;
+  top: 88%;
+  right: 2%;
+  border-radius: 999px;
+  rotate: -3deg;
+}
