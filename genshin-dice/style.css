@@ -36,16 +36,59 @@ main {
   background-color: #e8d780;
 }
 
-.face div {
+.face .pattern {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  clip-path: polygon(50% 10%, 85% 80%, 70% 93%, 30% 93%, 15% 80%);
+  clip-path: polygon(50% 10%, 85% 80%, 78% 93%, 22% 93%, 15% 80%);
 }
 
-.face div img {
+.face .corner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.face .corner div::before,
+.face .corner div::after {
+  content: "";
+  height: 2px;
+  position: absolute;
+  background-color: #c2af51;
+}
+
+.face .corner div:nth-child(1)::before {
+  width: 20px;
+  bottom: 0px;
+  left: 0px;
+  rotate: 60deg;
+}
+
+.face .corner div:nth-child(1)::after {
+  width: 25px;
+  bottom: 4px;
+  left: 3px;
+  rotate: 60deg;
+}
+
+.face .corner div:nth-child(2)::before {
+  width: 20px;
+  bottom: 0px;
+  right: 0px;
+  rotate: -60deg;
+}
+
+.face .corner div:nth-child(2)::after {
+  width: 25px;
+  bottom: 4px;
+  right: 3px;
+  rotate: -60deg;
+}
+
+.face .pattern img {
   margin-top: 23px;
   width: 60%;
   height: 60%;
@@ -83,62 +126,62 @@ main {
   transform: translateX(0) translateY(141px) translateZ(0) rotateY(-90deg) rotateX(35.5deg) rotateZ(180deg);
 }
 
-.face:nth-child(1) div {
+.face:nth-child(1) .pattern {
   background: radial-gradient(circle at 50% 57%, #c79948, #c10e00 50%);
 }
 
-.face:nth-child(2) div {
+.face:nth-child(2) .pattern {
   background: radial-gradient(circle at 50% 57%, #8d74ef, #6646e2 50%);
 }
 
-.face:nth-child(2) div img {
+.face:nth-child(2) .pattern img {
   filter: brightness(120%);
 }
 
-.face:nth-child(3) div {
+.face:nth-child(3) .pattern {
   background: radial-gradient(circle at 50% 57%, #dbdbdb, #b3b3b3 50%);
 }
 
-.face:nth-child(3) div img {
+.face:nth-child(3) .pattern img {
   filter: brightness(120%);
 }
 
-.face:nth-child(4) div {
+.face:nth-child(4) .pattern {
   background: radial-gradient(circle at 50% 57%, #97e1fa, #54b2d0 50%);
 }
 
-.face:nth-child(4) div img {
+.face:nth-child(4) .pattern img {
   filter: brightness(120%);
 }
 
-.face:nth-child(5) div {
+.face:nth-child(5) .pattern {
   background: radial-gradient(circle at 50% 57%, #75e190, #2dd055 100%);
 }
 
-.face:nth-child(5) div img {
+.face:nth-child(5) .pattern img {
   filter: brightness(120%);
 }
 
-.face:nth-child(6) div {
+.face:nth-child(6) .pattern {
   background: radial-gradient(circle at 50% 57%, #fffc4c, #80d158 50%);
 }
 
-.face:nth-child(6) div img {
+.face:nth-child(6) .pattern img {
   filter: saturate(291%) brightness(150%);
 }
 
-.face:nth-child(7) div {
+.face:nth-child(7) .pattern {
   background: radial-gradient(circle at 50% 57%, #7591f4, #4566dc 50%);
 }
 
-.face:nth-child(7) div img {
+.face:nth-child(7) .pattern img {
   filter: brightness(160%);
 }
 
-.face:nth-child(8) div {
+.face:nth-child(8) .pattern {
   background: radial-gradient(circle at 50% 57%, #fdc57c, #cd9750 50%);
 }
 
-.face:nth-child(8) div img {
+.face:nth-child(8) .pattern img {
   filter: brightness(120%);
 }
