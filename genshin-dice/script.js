@@ -1,7 +1,5 @@
-const dice = document.getElementById('🎲');
-
 function setTransform(x, y, z) {
-  dice.style.transform = `rotateX(${x}deg) rotateY(${y}deg) rotateZ(${z}deg)`;
+  document.getElementById('🎲')?.style.transform = `rotateX(${x}deg) rotateY(${y}deg) rotateZ(${z}deg)`;
 }
 
 let t = 0;
